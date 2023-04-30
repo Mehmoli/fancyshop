@@ -1,8 +1,12 @@
-import React from 'react';
+import HeaderBar from "../../Components/HeaderBar/HeaderBar";
+import Page from "../../Components/Page";
 
-function Home(props) {
+function Home() {
     return (
-        <h1>Home</h1>
+        <>
+            <HeaderBar />
+            <Page pageTitle={"Uitgelichte Producten"} limit={4} />
+        </>
     );
 }
 

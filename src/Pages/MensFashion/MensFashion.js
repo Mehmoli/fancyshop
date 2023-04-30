@@ -1,8 +1,13 @@
-import React from 'react';
+import Page from "../../Components/Page";
 
-function MensFashion(props) {
+const apiUrl = 'https://fakestoreapi.com/products/category/men\'s clothing';
+
+function MensFashion() {
+
     return (
-        <h1>Heren Mode</h1>
+        <>
+            <Page apiUrl={apiUrl} pageTitle={"Heren Kleding"} />
+        </>
     );
 }
 

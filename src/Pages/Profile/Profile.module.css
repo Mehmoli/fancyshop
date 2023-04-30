@@ -1,0 +1,27 @@
+/* PROFILE PAGE CSS */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    width: 74%;
+    text-align: center;
+    margin-top: 12px;
+    box-shadow: rgba(50, 50, 93, 0.23) 0 7px 7px 0;
+}
+
+.profile {
+    max-width: 74%;
+    margin-top: 2rem;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* END OF PROFILE PAGE CSS */

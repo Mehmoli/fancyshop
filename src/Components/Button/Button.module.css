@@ -1,0 +1,26 @@
+/* BUTTON CSS */
+
+.nav_button {
+    padding: 8px;
+    width: 300px;
+    background-color: #597B9B;
+    color: var(--lightBlue);
+    border-radius: 2px;
+    font-family: 'Rubik', 'Arial', sans-serif;
+    outline: none;
+}
+
+.nav_button:hover {
+    cursor: pointer;
+}
+
+.nav_button:disabled {
+    background-color: darkgray;
+    cursor: not-allowed;
+}
+
+.nav_button+.nav_button {
+    margin-left: 8px;
+}
+
+/* END OF BUTTON CSS */

@@ -1,15 +1,14 @@
-import './SearchInputButton.css';
-import {FaSearch} from "react-icons/fa";
+import searchStyle from './SearchInputButton.module.css';
+import { FaSearch } from "react-icons/fa";
 
 function SearchInputButton() {
 
     return (<>
             <li>
-                <div className="search">
-                    <input type="search" placeholder="Zoek" className="search-field"/>
-
-                    <button type="submit" className="search-button">
-                        <FaSearch size="0.8em"/>
+                <div className={searchStyle.search}>
+                    <input type="search" placeholder="Zoek" className={searchStyle.search_field} />
+                    <button type="submit" className={searchStyle.search_button}>
+                        <FaSearch size="0.8em" />
                     </button>
                 </div>
             </li>

@@ -1,11 +1,12 @@
 import React from 'react';
-import "./HeaderBar.css";
+import headerBarStyle from "./HeaderBar.module.css";
+import HeaderImage from "../../assets/headerimage-300.png";
 
-function HeaderBar(props) {
+function HeaderBar() {
     return (
-        <div className="header-bar">
-HEADER BAR
-        </div>
+        <section className={headerBarStyle.header_bar}>
+            <img className={headerBarStyle.header_image} alt="logo" src={HeaderImage} />
+        </section>
     );
 }
 

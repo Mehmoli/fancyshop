@@ -1,0 +1,57 @@
+/* CONTACT CSS */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    width: 74%;
+    text-align: center;
+    margin-top: 12px;
+    box-shadow: rgba(50, 50, 93, 0.23) 0 7px 7px 0;
+}
+
+.contact {
+    max-width: 74%;
+    margin-top: 2rem;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.chat {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.contact_field {
+    width: 100%;
+    border: 2px solid var(--lightGray);
+    padding: 5px;
+    height: 52px;
+    border-radius: 10px 10px 10px 10px;
+    outline: none;
+    color: #3c3c3c;
+    align-self: flex-start;
+}
+
+.btn_contact {
+    width: 50%;
+    background-color: #28a1b7;
+    height: 40px;
+    text-align: center;
+    color: var(--darkBlue);
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+/* END OF CONTACT CSS */

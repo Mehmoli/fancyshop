@@ -1,12 +1,13 @@
-/* SEARCH BOX CSS */
+/* SEARCH INPUTBOX AND BUTTON CSS */
 
 .search {
     width: 100%;
     display: flex;
+    justify-content: center;
 }
 
-.search-field {
-    width: 100%;
+.search_field {
+    width: 85%;
     border: 2px solid var(--lightGray);
     padding: 5px;
     height: 26px;
@@ -15,7 +16,7 @@
     color: #3c3c3c;
 }
 
-.search-button {
+.search_button {
 
     width: 40px;
     height: 26px;
@@ -26,4 +27,4 @@
     font-size: 20px;
 }
 
-/*SEARCH BOX CSS EINDE*/
+/* END SEARCH INPUTBOX AND BUTTON CSS */

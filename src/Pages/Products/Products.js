@@ -1,8 +1,13 @@
-import React from 'react';
+import Page from "../../Components/Page";
+
+const apiUrl = 'https://fakestoreapi.com/products';
 
 function Products(props) {
+
     return (
-        <h1>Producten </h1>
+        <>
+            <Page apiUrl={apiUrl} pageTitle={"Producten"} />
+        </>
     );
 }
 

@@ -1,27 +1,47 @@
 /* APP CSS */
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Noto Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
 }
+
 :root {
-  --darkBlue: #000b3d;
-  --lightGray: #c2c2c2;
-  --textColorLight: #eee;
-  --textColorDark: #000;
-  --lightBlue: #01e9ff;
+    --darkBlue: #000b3d;
+    --lightGray: #c2c2c2;
+    --textColorLight: #eee;
+    --textColorDark: #000;
+    --lightBlue: #01e9ff;
 }
+
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
+
 li {
-  list-style-type: none;
+    list-style-type: none;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+
+}
+
+body {
+    position: relative;
+    margin: 0;
+    min-height: 100%;
+    padding-bottom: 6.75rem;
+    box-sizing: inherit;
 }
 
 .icon-text {
-  margin:0 1px;
-  font-size: smaller;
+    margin: 0 1px;
+    font-size: smaller;
 }
+
+/* END OF APP CSS */

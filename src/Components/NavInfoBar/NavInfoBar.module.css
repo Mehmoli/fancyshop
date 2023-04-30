@@ -1,15 +1,24 @@
-/*HEADER BAR CSS*/
+/* NAV INFO BAR CSS */
 
-.header-bar {
+li {
+    list-style: none;
+}
+
+.links {
+    text-decoration: none;
+    color: var(--lightBlue);
+}
+
+.nav_info_bar {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 30px;
+    height: 24px;
     box-shadow: rgba(50, 50, 93, 0.23) 0 7px 7px 0;
-    background-color: #F6F6F6;
+    background-color: #000b3d;
 }
 
-.nav-info-bar-items {
+.nav_info_bar_items {
     display: flex;
     justify-content: space-between;
     flex-basis: 72%;
@@ -18,7 +27,7 @@
 }
 
 @media (max-width: 1024px) {
-    .nav-info-bar {
+    .nav_info_bar {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -27,3 +36,5 @@
         background-color: #000b3d;
     }
 }
+
+/* END NAV INFO BAR CSS */

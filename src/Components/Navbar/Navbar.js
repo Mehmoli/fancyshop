@@ -1,16 +1,17 @@
-import React, {useEffect, useState} from 'react';
-import {NavLink} from "react-router-dom";
+import React, { useEffect, useState, useContext } from 'react';
+import { NavLink } from "react-router-dom";
 import SearchInputButton from "../SearchInputButton/SearchInputButton";
-import {ReactComponent as Logo} from "../../assets/Icons/logofancyshop.svg";
-import {ReactComponent as Question} from "../../assets/Icons/questionmark.svg";
-import {ReactComponent as ShoppingBasket} from "../../assets/Icons/shoppingbasket.svg";
-import {ReactComponent as Hamburger} from "../../assets/Icons/hamburger.svg";
-import {ReactComponent as Cross} from "../../assets/Icons/cross.svg";
-import {ReactComponent as Heart} from "../../assets/Icons/heart.svg";
-import {ReactComponent as User} from "../../assets/Icons/user.svg";
-import "./Navbar.css";
+import { ReactComponent as Logo } from "../../assets/Icons/logofancyshop.svg";
+import { ReactComponent as Question } from "../../assets/Icons/questionmark.svg";
+import { ReactComponent as ShoppingBasket } from "../../assets/Icons/shoppingbasket.svg";
+import { ReactComponent as Hamburger } from "../../assets/Icons/hamburger.svg";
+import { ReactComponent as Cross } from "../../assets/Icons/cross.svg";
+import { ReactComponent as Heart } from "../../assets/Icons/heart.svg";
+import { ReactComponent as User } from "../../assets/Icons/user.svg";
+import navbarStyle from "./Navbar.module.css";
 import NavInfoBar from "../NavInfoBar/NavInfoBar";
-import HeaderBar from "../HeaderBar/HeaderBar";
+import { cartContext } from '../../BasketProductContext/BasketContext';
+
 
 function Navbar(props) {
 
@@ -25,36 +26,41 @@ function Navbar(props) {
         window.addEventListener("resize", screenMedia);
         return () => window.removeEventListener("resize", screenMedia);
     });
+    const { state } = useContext(cartContext);
 
     return (<>
         <header>
-            <NavInfoBar/>
-            <nav className='navbar-icons'>
-                <Logo className="logo"/>
-                <ul className={!screenSize ? "nav-search-bar-mobile" : "nav-search-bar"}>
-                    {!screenSize ? null : <SearchInputButton/>}
-                    <NavLink to='/products' className='products'>
+            <NavInfoBar />
+            <nav className={navbarStyle.navbar_icons}>
+                <Logo className={navbarStyle.logo} />
+                <ul className={!screenSize ? `${navbarStyle.nav_search_bar_mobile}` : `${navbarStyle.nav_search_bar}`}>
+                    {!screenSize ? null : <SearchInputButton />}
+                    <NavLink to='/products' className={navbarStyle.products}>
                     </NavLink>
-                    <NavLink to='/contact' className='contact'>
-                        <li>{screenSize ? <span className="icon-text">Klantenservice</span> : null}<span
-                            className="icon-bar-icons"> <Question/></span></li>
+                    <NavLink to='/contact' className={navbarStyle.contact}>
+                        <li>{screenSize ? <span className={navbarStyle.icon_text}>Klantenservice</span> : null}<span
+                            className={navbarStyle.icon_bar_icons}> <Question /></span></li>
                     </NavLink>
                     <NavLink to='/login' className='login'>
-                        <li>{screenSize ? <span className="icon-text">Favorieten</span> : null}<span
-                            className="icon-bar-icons"> <Heart/></span></li>
+                        <li>{screenSize ? <span className={navbarStyle.icon_text}>Favorieten</span> : null}<span
+                            className={navbarStyle.icon_bar_icons}> <Heart /></span></li>
                     </NavLink>
-                    <NavLink to='/basket' className='shopping-basket'>
-                        <li>{screenSize ? <span className="icon-text">Winkelmand</span> : null}<span
-                            className="icon-bar-icons"> <ShoppingBasket/></span></li>
+                    <NavLink to='/basket' className={navbarStyle.shopping_basket}>
+                        <li>{screenSize ? <span className={navbarStyle.icon_text}>Winkelmand</span> : null}<span
+                            className={navbarStyle.icon_bar_icons}><ShoppingBasket />
+
+                            {/* Navbar basket green popup product */}
+                            {state.itemCounter > 0 && <i className={navbarStyle.basket}>{state.itemCounter}</i>}
+                        </span></li>
                     </NavLink>
-                    <NavLink to='/profile' className='profile'>
-                        <li>{screenSize ? <span className="icon-text">Account</span> : null}<span
-                            className="icon-bar-icons"> <User/></span></li>
+                    <NavLink to='/profile' className={navbarStyle.profile}>
+                        <li>{screenSize ? <span className={navbarStyle.icon_text}>Account</span> : null}<span
+                            className={navbarStyle.icon_bar_icons}> <User /></span></li>
                     </NavLink>
                     <li>
-                        <button className='mobile-menu-icon' onClick={() => setMobile(!mobile)}>
-                            {mobile ? <span className="icon-bar-icons"><Cross/></span> :
-                                <span className="icon-bar-icons"><Hamburger/></span>}
+                        <button className={navbarStyle.mobile_menu_icon} onClick={() => setMobile(!mobile)}>
+                            {mobile ? <span className={navbarStyle.icon_bar_icons}><Cross /></span> :
+                                <span className={navbarStyle.icon_bar_icons}><Hamburger /></span>}
                         </button>
 
                     </li>
@@ -62,34 +68,36 @@ function Navbar(props) {
 
             </nav>
 
-
-            <nav className='navbar-menu'>
-                <ul className={mobile ? "nav-links-mobile" : "nav-links"} onClick={() => setMobile(false)}>
-                    <NavLink to='/' className='home'>
+            <nav className={navbarStyle.navbar_menu}>
+                <ul className={mobile ? `${navbarStyle.nav_links_mobile}` : `${navbarStyle.nav_links}`}
+                    onClick={() => setMobile(false)}>
+                    <NavLink to='/' className={navbarStyle.home}>
                         <li>Home</li>
                     </NavLink>
-                    <NavLink to='/products' className='products'>
+                    <NavLink to='/products' className={navbarStyle.products}>
                         <li>Producten</li>
-                    </NavLink><NavLink to='/mens-fashion' className='mens-fashion'>
+                    </NavLink><NavLink to='/mens-fashion' className={navbarStyle.mens_fashion}>
                     <li>Heren mode</li>
                 </NavLink>
-                    <NavLink to='/ladies-fashion' className='ladies-fashion'>
+                    <NavLink to='/ladies-fashion' className={navbarStyle.ladies_fashion}>
                         <li>Dames mode</li>
                     </NavLink>
-                    <NavLink to='/electronics' className='electronics'>
+                    <NavLink to='/jewellery' className={navbarStyle.jewellery}>
+                        <li>Juwelen</li>
+                    </NavLink>
+                    <NavLink to='/electronics' className={navbarStyle.electronics}>
                         <li>Electronica</li>
                     </NavLink>
-                    <NavLink to='/contact' className='contact'>
+                    <NavLink to='/contact' className={navbarStyle.contact}>
                         <li>Contact</li>
                     </NavLink>
                 </ul>
 
                 <ul>
-                    {/*Plaats zoekveld in plaats van menu*/}
-                    {!screenSize ? <SearchInputButton/> : null}
+                    {!screenSize ? <SearchInputButton /> : null}
                 </ul>
             </nav>
-            <HeaderBar/>
+
         </header>
     </>);
 }
