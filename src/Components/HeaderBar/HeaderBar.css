@@ -1,0 +1,29 @@
+/*HEADER BAR CSS*/
+
+.header-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30px;
+    box-shadow: rgba(50, 50, 93, 0.23) 0 7px 7px 0;
+    background-color: #F6F6F6;
+}
+
+.nav-info-bar-items {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 72%;
+    color: var(--textColorLight);
+    font-size: smaller;
+}
+
+@media (max-width: 1024px) {
+    .nav-info-bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 22px;
+        box-shadow: none;
+        background-color: #000b3d;
+    }
+}

@@ -1,0 +1,29 @@
+/* SEARCH BOX CSS */
+
+.search {
+    width: 100%;
+    display: flex;
+}
+
+.search-field {
+    width: 100%;
+    border: 2px solid var(--lightGray);
+    padding: 5px;
+    height: 26px;
+    border-radius: 10px 10px 10px 10px;
+    outline: none;
+    color: #3c3c3c;
+}
+
+.search-button {
+
+    width: 40px;
+    height: 26px;
+    text-align: center;
+    color: var(--darkBlue);
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/*SEARCH BOX CSS EINDE*/
