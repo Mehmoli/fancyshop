@@ -11,7 +11,7 @@ import NotFound from "./Pages/NotFound";
 import ShoppingBasket from "./Pages/ShoppingBasket/ShoppingBasket";
 import Navbar from "./Components/Navbar/Navbar";
 import Profile from "./Pages/Profile/Profile";
-import Page from "./Components/Page";
+import Page from "./Components/Page/Page";
 import { useContext } from "react";
 import { AuthContext } from "./AuthContext/AuthContextProvider";
 import SearchInputButton from "./Components/SearchInputButton/SearchInputButton";
