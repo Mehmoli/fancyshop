@@ -1,8 +1,7 @@
 import React from 'react';
 import { useParams } from "react-router-dom";
-import { useState, useEffect, useContext } from "react";
+import { useContext } from "react";
 import prodDetailStyle from "./ProductDetails.module.css";
-import { Link } from "react-router-dom";
 import { ReactComponent as HeartIcon } from "../../assets/Icons/heart.svg";
 import Button from "../../Components/Button/Button";
 import { ReactComponent as CartIcon } from "../../assets/Icons/shopping-cart.svg";

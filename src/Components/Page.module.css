@@ -1,5 +1,9 @@
-/* HOME CSS */
+/* PAGE CSS */
 
+.sort_select {
+    text-align: right;
+    margin-right: 15px;
+}
 .products {
     display: flex;
     justify-content: center;
@@ -30,4 +34,4 @@
     box-shadow: rgba(50, 50, 93, 0.23) 0 7px 7px 0;
 }
 
-/* END OF HOME CSS */
+/* END OF PAGE CSS */
