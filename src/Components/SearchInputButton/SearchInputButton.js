@@ -53,7 +53,7 @@ function SearchInputButton({ all }) {
                 </div>
             </li>
 
-            </>
+        </>
 
     );
 }

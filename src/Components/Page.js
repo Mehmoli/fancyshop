@@ -4,10 +4,11 @@ import Footer from '../Components/Footer/Footer';
 import pageStyle from './Page.module.css';
 import {ProductsContext} from '../BasketProductContext/ProductContext';
 
-function Page({pageTitle, category, limit}) {
+function Page({ pageTitle, category, limit }) {
     const products = useContext(ProductsContext);
 
     const [sortOption, setSortOption] = useState('');
+    const [searchQuery, setSearchQuery] = useState('');
     const [displayedProducts, setDisplayedProducts] = useState(null);
 
     const getRandomProducts = (products, limit) => {
@@ -40,7 +41,15 @@ function Page({pageTitle, category, limit}) {
                 ? getRandomProducts(sortedProducts, limit)
                 : sortedProducts;
 
-            setDisplayedProducts(productsToDisplay);
+            if (searchQuery) {
+                const searchResults = productsToDisplay.filter((product) => {
+                    return product.title.toLowerCase().includes(searchQuery.toLowerCase());
+                });
+
+                setDisplayedProducts(searchResults);
+            } else {
+                setDisplayedProducts(productsToDisplay);
+            }
         }
     }, [products, category, limit, sortOption]);
 
@@ -52,7 +61,7 @@ function Page({pageTitle, category, limit}) {
                 <div>
                     {pageTitle === "Producten" && (
                         <div className={pageStyle.sort_select}>
-                            <label htmlFor="sort">Sort by:</label>
+                            <label htmlFor="sort">Sorteren op:</label>
                             <select
                                 id="sort"
                                 value={sortOption}
