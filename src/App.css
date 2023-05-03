@@ -15,10 +15,30 @@
     --textColorLight: #eee;
     --textColorDark: #000;
     --lightBlue: #01e9ff;
+    --buttonColor:#3C8496;
 }
 
 a {
     text-decoration: none;
+
+}
+a:link {
+    color: #274f52;
+
+}
+a:visited {
+    color: #00b5b8;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+a:hover {
+    color: #269cae;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+a:active {
+    color: #5a636f;
+
 }
 
 li {

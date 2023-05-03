@@ -21,6 +21,7 @@ function Login(props) {
         try {
             const result = await axios.post('https://frontend-educational-backend.herokuapp.com/api/auth/signin', {
                 username: email,
+                email: email,
                 password: password,
             });
             // log het resultaat in de console

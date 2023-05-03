@@ -10,9 +10,8 @@
 }
 
 .active {
-    border: 2px solid #01e9ff;
-    border-radius: 10px;
-    color: #01e9ff;
+    border: 2px solid rgb(60, 132, 150);;
+    border-radius: 5px;
 }
 
 .pageNumbers {

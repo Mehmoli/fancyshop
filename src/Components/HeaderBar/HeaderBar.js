@@ -5,7 +5,7 @@ import HeaderImage from "../../assets/headerimage-300.png";
 function HeaderBar() {
     return (
         <section className={headerBarStyle.header_bar}>
-            <img className={headerBarStyle.header_image} alt="logo" src={HeaderImage} />
+            <img className={headerBarStyle.header_image} alt="header_banner" src={HeaderImage} />
         </section>
     );
 }

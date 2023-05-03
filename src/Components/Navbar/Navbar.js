@@ -8,12 +8,15 @@ import { ReactComponent as Hamburger } from "../../assets/Icons/hamburger.svg";
 import { ReactComponent as Cross } from "../../assets/Icons/cross.svg";
 import { ReactComponent as Heart } from "../../assets/Icons/heart.svg";
 import { ReactComponent as User } from "../../assets/Icons/user.svg";
+import {ReactComponent as CheckMark} from "../../assets/Icons/checkmark.svg";
 import navbarStyle from "./Navbar.module.css";
 import NavInfoBar from "../NavInfoBar/NavInfoBar";
 import { cartContext } from '../../BasketProductContext/BasketContext';
+import {AuthContext} from "../../AuthContext/AuthContextProvider";
 
 
 function Navbar(props) {
+    const { isAuth } = useContext(AuthContext);
 
     const [mobile, setMobile] = useState(false);
     const [screenSize, setScreenSize] = useState(window.innerWidth >= 1024);
@@ -57,7 +60,8 @@ function Navbar(props) {
                     </NavLink>
                     <NavLink to='/profile' className={navbarStyle.profile}>
                         <li>{screenSize ? <span className={navbarStyle.icon_text}>Account</span> : null}<span
-                            className={navbarStyle.icon_bar_icons}> <User /></span></li>
+                            className={navbarStyle.icon_bar_icons}><User />
+                            {isAuth ? <CheckMark className={navbarStyle.checkmark}/> :null}</span></li>
                     </NavLink>
                     <li>
                         <button className={navbarStyle.mobile_menu_icon} onClick={() => setMobile(!mobile)}>

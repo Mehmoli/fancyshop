@@ -64,4 +64,5 @@ function SearchInputButton({ all }) {
         </>
     );
 }
+
 export default SearchInputButton;

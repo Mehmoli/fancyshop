@@ -18,8 +18,8 @@
 }
 
 .button_common {
-    background-color: rgb(60, 132, 150);
-    color: white;
+    background-color: var(--buttonColor);
+    color: var(--textColorLight);
     padding: 15px 30px;
     border: none;
     font-size: 22px;
