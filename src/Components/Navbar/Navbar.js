@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import SearchInputButton from "../SearchInputButton/SearchInputButton";
 import { ReactComponent as Logo } from "../../assets/Icons/logofancyshop.svg";
 import { ReactComponent as Question } from "../../assets/Icons/questionmark.svg";
@@ -32,7 +32,9 @@ function Navbar(props) {
         <header>
             <NavInfoBar />
             <nav className={navbarStyle.navbar_icons}>
-                <Logo className={navbarStyle.logo} />
+                <Link to={"/"}>
+                    <Logo className={navbarStyle.logo} />
+                </Link>
                 <ul className={!screenSize ? `${navbarStyle.nav_search_bar_mobile}` : `${navbarStyle.nav_search_bar}`}>
                     {!screenSize ? null : <SearchInputButton />}
                     <NavLink to='/products' className={navbarStyle.products}>
