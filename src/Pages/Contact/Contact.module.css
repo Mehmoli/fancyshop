@@ -44,10 +44,10 @@
 
 .btn_contact {
     width: 50%;
-    background-color: #28a1b7;
+    background-color: var(--buttonColor);
     height: 40px;
     text-align: center;
-    color: var(--darkBlue);
+    color: var(--textColorLight);
     border-radius: 5px 5px 5px 5px;
     cursor: pointer;
     font-size: 20px;

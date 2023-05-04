@@ -15,7 +15,7 @@ function AuthContextProvider({ children }) {
 
     const fetchUserData = useCallback(async (token, redirectUrl) => {
         try {
-            console.log("fout?");
+            // console.log("fout?");
             console.log(token);
             const { data } = await axios.get(
                 `https://frontend-educational-backend.herokuapp.com/api/user`,

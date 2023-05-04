@@ -12,7 +12,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /*flex-basis: 140px;*/
     max-height: 1000px;
     background: rgb(255, 255, 255);
     border-radius: 4px;
@@ -54,13 +53,22 @@
     color: red;
 }
 
+.btn_back{
+    background-color: var(--buttonColor);
+    color: var(--textColorLight);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 .btn_product_card {
     width: 300px;
-    background-color: #01e9ff;
+    background-color: var(--buttonColor);
+    border-radius: 4px;
     height: 40px;
     cursor: pointer;
     display: block;
     margin: 0 auto;
+    color: var(--textColorLight);
 }
 
 /* END OF PRODUCT DETAILS */

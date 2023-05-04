@@ -9,12 +9,12 @@ function Logout() {
         console.log("hallo hiero")
         const timer = setTimeout(() => {
             logout();
-        }, 5000);
+        }, 1000);
 
         return () => {
             clearTimeout(timer);
         };
-    }, [])
+    }, [logout])
 
     return (
         <>

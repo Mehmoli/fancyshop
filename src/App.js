@@ -11,10 +11,10 @@ import NotFound from "./Pages/NotFound";
 import ShoppingBasket from "./Pages/ShoppingBasket/ShoppingBasket";
 import Navbar from "./Components/Navbar/Navbar";
 import Profile from "./Pages/Profile/Profile";
-import Page from "./Components/Page";
+import Page from "./Components/Page/Page";
 import { useContext } from "react";
 import { AuthContext } from "./AuthContext/AuthContextProvider";
-import SearchInputButton from "./Components/SearchInputButton/SearchInputButton";
+import SearchPage from "./Components/SearchInputButton/SearchPage";
 
 function App() {
     const { isAuth } = useContext(AuthContext);
@@ -30,9 +30,7 @@ function App() {
                 <Route path="/jewellery" element={<Page pageTitle={"Juwelen"} category={"jewelery"} />} />
                 <Route path="/electronics" element={<Page pageTitle={"Electronica"} category={"electronics"} />} />
                 <Route path="/product-detail/:id" element={<ProductDetails />} />
-
-                <Route path="/search" element={<SearchInputButton />} />
-
+                <Route path="/search" element={<SearchPage />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />

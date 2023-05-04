@@ -22,9 +22,20 @@ function NavInfoBar() {
         <header>
             <nav className={navInfoBarStyle.nav_info_bar}>
                 <ul className={navInfoBarStyle.nav_info_bar_items}>
-                    {!screenSize ? <li>
-                        Gratis verzending vanaf 50 euro
-                    </li> : <>
+                    {!screenSize ?
+                        <li>
+                            {!isAuth ?
+                                <>
+                                    <Link className={navInfoBarStyle.links} to="/login">inloggen </Link>
+                                    of
+                                    <Link className={navInfoBarStyle.links} to="/register"> registreren</Link>
+                                </>
+                                :
+                                <Link className={navInfoBarStyle.links} to="/logout">uitloggen</Link>
+                            }
+                        </li>
+                        :
+                        <>
                         <li>
                             Gratis verzending vanaf 50 euro
                         </li>

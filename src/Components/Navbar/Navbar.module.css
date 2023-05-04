@@ -4,7 +4,7 @@
     position: absolute;
     bottom: 10px;
     left: 15px;
-    background-color: green;
+    background-color: forestgreen;
     width: 18px;
     height: 18px;
     border-radius: 50%;
@@ -13,6 +13,12 @@
     justify-content: center;
     align-items: center;
     font-size: 0.85em;
+}
+
+.checkmark {
+    color: forestgreen;
+    width: 20px;
+    height: 20px;
 }
 
 .navbar_menu {

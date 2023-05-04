@@ -33,15 +33,13 @@ function Profile() {
             <section className={profileStyle.container}>
                 <h1 className={profileStyle.title}>Profielpagina</h1>
                 <div className={profileStyle.profile}>
-                    <h3>Gegevens</h3>
+                    <h3>Uw persoonlijke gegevens</h3>
 
                     <p><strong>Gebruikersnaam:</strong> {user.username}</p>
                     <p><strong>Email:</strong> {user.email}</p>
 
                     {Object.keys(profileData).length > 0 &&
-                        <p>Strikt geheime profiel-content</p>}
-                    <h3>{profileData.title}</h3>
-                    <p>{profileData.content}</p>
+                        <h3>---------------------------------</h3>}
                     <p>Terug naar de <Link to="/">Homepagina</Link></p>
                 </div>
             </section>

@@ -1,49 +1,40 @@
 import searchStyle from './SearchInputButton.module.css';
 import { FaSearch } from "react-icons/fa";
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
 import { ProductsContext } from "../../BasketProductContext/ProductContext";
-import {useNavigate} from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 
 function SearchInputButton({ all }) {
     const products = useContext(ProductsContext);
-
+    const navigate = useNavigate();
 
     const [searchQuery, setSearchQuery] = useState('');
-    const [displayedProducts, setDisplayedProducts] = useState([]);
-
-    useEffect(() => {
-        if (products) {
-            const productsToDisplay = all
-                ? products.filter((product) => product.category === all)
-                : products;
-
-            if (searchQuery) {
-                const searchResults = productsToDisplay.filter((product) =>
-                    product.title.toLowerCase().includes(searchQuery.toLowerCase()));
-
-                setDisplayedProducts(searchResults);
-            } else {
-                setDisplayedProducts(displayedProducts);
-            }
-        }
-
-    }, [displayedProducts, products, searchQuery, all]);
 
     const handleSearch = (e) => {
         setSearchQuery(e.target.value);
+        if (e.target.value === "") {
+            // Do nothing
+        } else {
+            const filtered = products.filter(
+                product => {
+                    return (
+                        product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                        product.category.toLowerCase().includes(searchQuery.toLowerCase())
+                    );
+                }
+            );
+            navigate('/search', { state: { filteredProducts: filtered } });
+        }
     };
-
-    console.log(searchQuery);
 
     return (
         <>
-
             <li>
                 <div className={searchStyle.search}>
                     <input
                         type="search"
                         placeholder="Zoek"
+                        value={searchQuery}
                         className={searchStyle.search_field}
                         onChange={handleSearch}
                     />
@@ -52,11 +43,8 @@ function SearchInputButton({ all }) {
                     </button>
                 </div>
             </li>
-
-            </>
-
+        </>
     );
 }
-
 
 export default SearchInputButton;

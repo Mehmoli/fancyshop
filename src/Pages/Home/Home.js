@@ -1,5 +1,5 @@
 import HeaderBar from "../../Components/HeaderBar/HeaderBar";
-import Page from "../../Components/Page";
+import Page from "../../Components/Page/Page";
 
 function Home() {
     return (

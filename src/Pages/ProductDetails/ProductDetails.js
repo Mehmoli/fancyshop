@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import { useContext } from "react";
 import prodDetailStyle from "./ProductDetails.module.css";
 import { ReactComponent as HeartIcon } from "../../assets/Icons/heart.svg";
@@ -8,10 +8,16 @@ import { ReactComponent as CartIcon } from "../../assets/Icons/shopping-cart.svg
 import Footer from "../../Components/Footer/Footer";
 import { ProductsContext } from '../../BasketProductContext/ProductContext';
 import { cartContext } from '../../BasketProductContext/BasketContext';
+import {ReactComponent as ArrowLeft} from "../../assets/Icons/arrowleft.svg";
 
 
-function ProductDetails(props) {
+
+function ProductDetails() {
     const { dispatch } = useContext(cartContext);
+    const navigate = useNavigate();
+    const goBack = () => {
+        navigate(-1);
+    }
 
     const params = useParams();
     const data = useContext(ProductsContext);
@@ -22,6 +28,7 @@ function ProductDetails(props) {
         <>
             <section className={prodDetailStyle.container}>
                 <div className={prodDetailStyle.product_card}>
+                    <button className={prodDetailStyle.btn_back} onClick={goBack}><ArrowLeft/>Terug</button>
                     <h3>{product.title}</h3>
                     <div className={prodDetailStyle.product_photo}>
                         <img
@@ -36,7 +43,7 @@ function ProductDetails(props) {
 
                         <p>{product.description}</p>
                         <HeartIcon className={prodDetailStyle.product_heart_icon} />
-                        <p className={prodDetailStyle.price}>€ {product.price}</p>
+                        <p className={prodDetailStyle.price}>€ {product.price.toFixed(2)}</p>
 
                         <Button
                             className={prodDetailStyle.btn_product_card}
