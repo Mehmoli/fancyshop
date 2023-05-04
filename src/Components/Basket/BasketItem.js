@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import shoppingBasketStyle from "../../Pages/ShoppingBasket/ShoppingBasket.module.css";
 import { ReactComponent as Plus } from "../../assets/Icons/plus.svg";
 import { ReactComponent as Minus } from "../../assets/Icons/minus.svg";
-import { ReactComponent as Heart } from "../../assets/Icons/heart.svg";
 import { ReactComponent as Cross } from "../../assets/Icons/cross.svg";
 import { cartContext } from "../../BasketProductContext/BasketContext";
 import { textTrim } from "../../helpers/textTrim";
@@ -14,16 +13,11 @@ const BasketItem = ({ data }) => {
 
     return (
         <div className={shoppingBasketStyle.item}>
-            <div className={shoppingBasketStyle.buttons}>
-                <Heart className={shoppingBasketStyle.btn_heart} />
-            </div>
             <div className={shoppingBasketStyle.image}>
                 <img src={image} alt={textTrim(title)} />
             </div>
             <div className={shoppingBasketStyle.description}>
                 <span>{textTrim(title)}</span>
-                <span>----</span>
-                <span>----</span>
             </div>
             <div className={shoppingBasketStyle.quantity}>
                 <Plus className={shoppingBasketStyle.btn_plus} onClick={() => dispatch({ type: "INCREASE", payload: data })} />

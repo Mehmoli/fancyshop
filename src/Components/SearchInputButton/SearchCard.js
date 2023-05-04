@@ -5,7 +5,6 @@ import { cartContext } from '../../BasketProductContext/BasketContext';
 import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
 import { ReactComponent as CartIcon } from "../../assets/Icons/shopping-cart.svg";
-import { ReactComponent as HeartIcon } from "../../assets/Icons/heart.svg";
 import { textTrim } from '../../helpers/textTrim'
 import { isInBasket } from '../../helpers/isInBasket'
 import { ReactComponent as CrossIcon } from '../../assets/Icons/cross.svg';
@@ -25,7 +24,6 @@ function SearchCard({ product }) {
                         alt={`Afbeelding ${product.title}`}
                         src={product.image}
                     />
-                    <HeartIcon className={singleProductStyle.product_heart_icon} />
                 </div>
             </Link>
             <div className={singleProductStyle.product_text}>

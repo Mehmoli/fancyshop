@@ -6,7 +6,6 @@ import { ReactComponent as Question } from "../../assets/Icons/questionmark.svg"
 import { ReactComponent as ShoppingBasket } from "../../assets/Icons/shoppingbasket.svg";
 import { ReactComponent as Hamburger } from "../../assets/Icons/hamburger.svg";
 import { ReactComponent as Cross } from "../../assets/Icons/cross.svg";
-import { ReactComponent as Heart } from "../../assets/Icons/heart.svg";
 import { ReactComponent as User } from "../../assets/Icons/user.svg";
 import {ReactComponent as CheckMark} from "../../assets/Icons/checkmark.svg";
 import navbarStyle from "./Navbar.module.css";
@@ -45,10 +44,6 @@ function Navbar(props) {
                     <NavLink to='/contact' className={navbarStyle.contact}>
                         <li>{screenSize ? <span className={navbarStyle.icon_text}>Klantenservice</span> : null}<span
                             className={navbarStyle.icon_bar_icons}> <Question /></span></li>
-                    </NavLink>
-                    <NavLink to='/basket' className='login'>
-                        <li>{screenSize ? <span className={navbarStyle.icon_text}>Favorieten</span> : null}<span
-                            className={navbarStyle.icon_bar_icons}> <Heart /></span></li>
                     </NavLink>
                     <NavLink to='/basket' className={navbarStyle.shopping_basket}>
                         <li>{screenSize ? <span className={navbarStyle.icon_text}>Winkelmand</span> : null}<span

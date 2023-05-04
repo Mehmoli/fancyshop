@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import Button from '../Button/Button';
 import { ReactComponent as CartIcon } from "../../assets/Icons/shopping-cart.svg";
-import { ReactComponent as HeartIcon } from "../../assets/Icons/heart.svg";
 import singleProductStyle from "./SingleProduct.module.css";
 import { Link } from "react-router-dom";
 import { textTrim } from '../../helpers/textTrim'
@@ -22,7 +21,6 @@ function SingleProduct({ product }) {
                         alt='Afbeelding product'
                         src={product.image}
                     />
-                    <HeartIcon className={singleProductStyle.product_heart_icon} />
                 </div>
             </Link>
             <div className={singleProductStyle.product_text}>

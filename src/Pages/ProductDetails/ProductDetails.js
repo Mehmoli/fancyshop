@@ -2,7 +2,6 @@ import React from 'react';
 import {useNavigate, useParams} from "react-router-dom";
 import { useContext } from "react";
 import prodDetailStyle from "./ProductDetails.module.css";
-import { ReactComponent as HeartIcon } from "../../assets/Icons/heart.svg";
 import Button from "../../Components/Button/Button";
 import { ReactComponent as CartIcon } from "../../assets/Icons/shopping-cart.svg";
 import Footer from "../../Components/Footer/Footer";
@@ -42,7 +41,6 @@ function ProductDetails() {
 
 
                         <p>{product.description}</p>
-                        <HeartIcon className={prodDetailStyle.product_heart_icon} />
                         <p className={prodDetailStyle.price}>€ {product.price.toFixed(2)}</p>
 
                         <Button
