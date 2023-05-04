@@ -46,7 +46,7 @@ function Navbar(props) {
                         <li>{screenSize ? <span className={navbarStyle.icon_text}>Klantenservice</span> : null}<span
                             className={navbarStyle.icon_bar_icons}> <Question /></span></li>
                     </NavLink>
-                    <NavLink to='/login' className='login'>
+                    <NavLink to='/basket' className='login'>
                         <li>{screenSize ? <span className={navbarStyle.icon_text}>Favorieten</span> : null}<span
                             className={navbarStyle.icon_bar_icons}> <Heart /></span></li>
                     </NavLink>

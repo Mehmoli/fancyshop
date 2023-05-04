@@ -1,48 +1,31 @@
 import searchStyle from './SearchInputButton.module.css';
 import { FaSearch } from "react-icons/fa";
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
 import { ProductsContext } from "../../BasketProductContext/ProductContext";
 import { useNavigate } from "react-router-dom";
-import SearchList from './SearchList';
 
 function SearchInputButton({ all }) {
     const products = useContext(ProductsContext);
     const navigate = useNavigate();
 
     const [searchQuery, setSearchQuery] = useState('');
-    const [displayedProducts, setDisplayedProducts] = useState(false);
-    const [filteredProducts, setFilteredProducts] = useState([]);
 
     const handleSearch = (e) => {
         setSearchQuery(e.target.value);
         if (e.target.value === "") {
-            setDisplayedProducts(false);
+            // Do nothing
         } else {
-            setFilteredProducts(products.filter(
+            const filtered = products.filter(
                 product => {
                     return (
                         product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                         product.category.toLowerCase().includes(searchQuery.toLowerCase())
                     );
                 }
-            ));
-            setDisplayedProducts(true);
-            navigate({
-                pathname: '/search',
-                state: { filteredProducts: filteredProducts }
-            });
+            );
+            navigate('/search', { state: { filteredProducts: filtered } });
         }
     };
-
-
-    function searchList() {
-        if (displayedProducts) {
-            return (
-                <SearchList filteredProducts={filteredProducts} />
-            );
-        }
-    }
-
 
     return (
         <>
@@ -60,7 +43,6 @@ function SearchInputButton({ all }) {
                     </button>
                 </div>
             </li>
-            {searchList()}
         </>
     );
 }

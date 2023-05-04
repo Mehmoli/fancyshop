@@ -1,14 +1,26 @@
 import React from 'react';
 import SearchList from './SearchList';
+import { useLocation } from 'react-router-dom';
+import pageStyle from "../Page/Page.module.css";
+import Footer from "../Footer/Footer";
 
-function SearchPage({ filteredProducts, displayedProducts, }) {
+function SearchPage() {
+    const location = useLocation();
+    const { filteredProducts } = location.state || {};
+
     return (
-        <div>
-            <h1>Search Results:</h1>
-            {displayedProducts &&
-                <SearchList filteredProducts={filteredProducts} />}
+        <>
+        <section className={pageStyle.products}>
+            <h1>Zoek Resultaten</h1>
 
-        </div>
+                <div className={pageStyle.product_cards}>
+
+                    {filteredProducts && <SearchList filteredProducts={filteredProducts} />}
+
+                </div>
+        </section>
+    <Footer />
+        </>
     )
 }
 
