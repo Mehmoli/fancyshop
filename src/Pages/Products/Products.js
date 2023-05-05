@@ -2,7 +2,7 @@ import Page from "../../Components/Page/Page";
 
 const apiUrl = 'https://fakestoreapi.com/products';
 
-function Products(props) {
+function Products() {
 
     return (
         <>

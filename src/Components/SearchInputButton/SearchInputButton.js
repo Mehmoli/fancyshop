@@ -4,7 +4,7 @@ import { useState, useContext } from "react";
 import { ProductsContext } from "../../BasketProductContext/ProductContext";
 import { useNavigate } from "react-router-dom";
 
-function SearchInputButton({ all }) {
+function SearchInputButton() {
     const products = useContext(ProductsContext);
     const navigate = useNavigate();
 

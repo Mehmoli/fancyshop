@@ -8,7 +8,7 @@ import axios from 'axios';
 import { AuthContext } from '../../AuthContext/AuthContextProvider';
 
 
-function Login(props) {
+function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, toggleError] = useState(false);
