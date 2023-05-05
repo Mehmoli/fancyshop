@@ -12,18 +12,17 @@ De aantallen producten zijn beperkt, namelijk 20 stuks.
 -jwt-decode
 
 Getting Started
-
-    Clone project van [Github]https://github.com/Mehmoli/fancyshop.git
+Clone project van <https://github.com/Mehmoli/fancyshop.git>
 
 Installatie
     
-    Voor node_modules moet het volgende commando uitgevoerd worden.
+Voor node_modules moet het volgende commando uitgevoerd worden.
 
- `npm install`
+    `npm install`
 
-    Als de installatie gelukt is kan de applicatie gestart worden met het volgende commando:
+Als de installatie gelukt is kan de applicatie gestart worden met het volgende commando:
 
- `npm start`
+    `npm start`
 
 Uitvoering van het programma:
 
