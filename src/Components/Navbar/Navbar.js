@@ -14,7 +14,7 @@ import { cartContext } from '../../BasketProductContext/BasketContext';
 import {AuthContext} from "../../AuthContext/AuthContextProvider";
 
 
-function Navbar(props) {
+function Navbar() {
     const { isAuth } = useContext(AuthContext);
 
     const [mobile, setMobile] = useState(false);

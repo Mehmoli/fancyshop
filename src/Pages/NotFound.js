@@ -1,6 +1,6 @@
 import React from 'react';
 
-function NotFound(props) {
+function NotFound() {
     return (
         <h1>Er is iets misgegaan!</h1>
     );
