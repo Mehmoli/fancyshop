@@ -11,7 +11,7 @@ De aantallen producten zijn beperkt, namelijk 20 stuks.
 -axios  
 -jwt-decode
 
-Getting Started
+Getting Started  
 Clone project van <https://github.com/Mehmoli/fancyshop.git>
 
 Installatie
@@ -26,6 +26,6 @@ Als de installatie gelukt is kan de applicatie gestart worden met het volgende c
 
 Uitvoering van het programma:
 
-    Na (npm start) kan je de applicatie bekijken op pagina htpp://Localhost:3000
+Na (npm start) kan je de applicatie bekijken op pagina htpp://Localhost:3000
 
 
