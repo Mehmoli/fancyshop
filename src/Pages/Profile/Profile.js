@@ -14,7 +14,7 @@ function Profile() {
             const token = localStorage.getItem('token');
 
             try {
-                const result = await axios.get('https://frontend-educational-backend.herokuapp.com/api/user', {
+                const result = await axios.get(`${process.env.REACT_APP_NOVI_BACKEND}user`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },

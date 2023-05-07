@@ -2,10 +2,8 @@ import React, { useContext } from 'react';
 import shoppingBasketStyle from "../../Pages/ShoppingBasket/ShoppingBasket.module.css";
 import { cartContext } from "../../BasketProductContext/BasketContext";
 
-
 function CheckOut() {
     const { state, dispatch } = useContext(cartContext)
-
 
     return (
 

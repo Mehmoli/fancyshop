@@ -10,7 +10,7 @@ const ProductsContextProvider = ({children}) => {
             setProducts(await fetchProduct());
         };
 
-        fetchData();
+        void fetchData();
     }, []);
 
     return (

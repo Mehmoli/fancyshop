@@ -1,4 +1,4 @@
-/* SHOPPINGBASKET CSS */
+/* SHOPPING BASKET CSS */
 
 .shopping_cart {
     display: flex;
@@ -148,6 +148,7 @@ input:focus {
     background-color: var(--buttonColor);
     cursor: pointer;
     border-radius: 5px;
+    color:var(--textColorLight);
 }
 
 @media (max-width: 764px) {
@@ -180,4 +181,4 @@ input:focus {
     }
 }
 
-/* END OF SHOPPINGBASKET CSS */
+/* END OF SHOPPING BASKET CSS */

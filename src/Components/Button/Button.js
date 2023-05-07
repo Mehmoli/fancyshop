@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 function Button({ disabled, type, className, onClick, children }) {
     return (
         <button

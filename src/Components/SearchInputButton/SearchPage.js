@@ -12,11 +12,8 @@ function SearchPage() {
         <>
         <section className={pageStyle.products}>
             <h1>Zoek Resultaten</h1>
-
                 <div className={pageStyle.product_cards}>
-
                     {filteredProducts && <SearchList filteredProducts={filteredProducts} />}
-
                 </div>
         </section>
     <Footer />
