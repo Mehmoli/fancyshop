@@ -10,13 +10,13 @@ en inloggen met het gemaakte account om zo de profielgegevens te bekijken.
 
 #### Dependencies
 
--react
--react-dom
--react-router-dom v6  
+-react  
+-react-dom  
+-react-router-dom v6    
 -axios  
--jwt-decode
--react-icons
--react-scripts
+-jwt-decode  
+-react-icons  
+-react-scripts  
 
 #### Getting Started  
 Clone project van <https://github.com/Mehmoli/fancyshop.git>
