@@ -13,10 +13,8 @@ import NavInfoBar from "../NavInfoBar/NavInfoBar";
 import { cartContext } from '../../BasketProductContext/BasketContext';
 import {AuthContext} from "../../AuthContext/AuthContextProvider";
 
-
 function Navbar() {
     const { isAuth } = useContext(AuthContext);
-
     const [mobile, setMobile] = useState(false);
     const [screenSize, setScreenSize] = useState(window.innerWidth >= 1024);
 
@@ -66,7 +64,6 @@ function Navbar() {
 
                     </li>
                 </ul>
-
             </nav>
 
             <nav className={navbarStyle.navbar_menu}>
@@ -93,15 +90,12 @@ function Navbar() {
                         <li>Contact</li>
                     </NavLink>
                 </ul>
-
                 <ul>
                     {!screenSize ? <SearchInputButton /> : null}
                 </ul>
             </nav>
-
         </header>
     </>);
 }
-
 
 export default Navbar;

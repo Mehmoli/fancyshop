@@ -6,7 +6,6 @@ function Logout() {
     const { logout } = useContext(AuthContext);
 
     useEffect(() => {
-        console.log("hallo hiero")
         const timer = setTimeout(() => {
             logout();
         }, 1000);

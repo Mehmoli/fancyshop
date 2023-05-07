@@ -1,6 +1,5 @@
 import './App.css';
 import Home from "./Pages/Home/Home";
-import Products from "./Pages/Products/Products";
 import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 import Contact from "./Pages/Contact/Contact";
 import Login from "./Pages/LoginRegister/Login";
@@ -23,7 +22,7 @@ function App() {
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/products" element={<Products />} />
+                <Route path="/products" element={<Page pageTitle={"Producten"} />} />
                 <Route path="/productdetails" element={<ProductDetails />} />
                 <Route path="/mens-fashion" element={<Page pageTitle={"Heren Mode"} category={"men's clothing"} />} />
                 <Route path="/ladies-fashion" element={<Page pageTitle={"Dames Mode"} category={"women's clothing"} />} />

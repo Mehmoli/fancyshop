@@ -7,10 +7,9 @@ import Pagination from '../Pagination/Pagination';
 
 function Page({ pageTitle, category, limit }) {
     const products = useContext(ProductsContext);
+    const itemsPerPage = 5;
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage, setItemsPerPage] = useState(5);
-
     const [sortOption, setSortOption] = useState('');
     const [displayedProducts, setDisplayedProducts] = useState('');
 
@@ -35,7 +34,6 @@ function Page({ pageTitle, category, limit }) {
 
     useEffect(() => {
         if (products) {
-            // Filter, sort, and shuffle the products as before
             const filteredProducts = products.filter((product) => {
                 return category ? product.category === category : true;
             });
@@ -44,20 +42,15 @@ function Page({ pageTitle, category, limit }) {
                 ? getRandomProducts(sortedProducts, limit)
                 : sortedProducts;
 
-            // Calculate the index of the first and last items to display
             const lastIndex = currentPage * itemsPerPage;
             const firstIndex = lastIndex - itemsPerPage;
-            // console.log(lastIndex);
 
-            // Set the displayed products to a slice of the products to display
             const displayedProducts = productsToDisplay.slice(firstIndex, lastIndex);
             setDisplayedProducts(displayedProducts);
         }
     }, [products, category, limit, sortOption, currentPage, itemsPerPage]);
 
     const totalPages = Math.ceil(products.length / itemsPerPage);
-    // setCurrentPage(totalPages);
-    // console.log(totalPages)
 
     function handlePageChange(pageNumber) {
         setCurrentPage(pageNumber);
@@ -86,10 +79,6 @@ function Page({ pageTitle, category, limit }) {
                             </select>
 
                         </div>
-
-
-
-
                     )}
 
                     <div className={pageStyle.product_cards}>
@@ -110,7 +99,6 @@ function Page({ pageTitle, category, limit }) {
                                 totalPages={totalPages}
                                 onPageChange={handlePageChange}
                             />)}
-
                     </div>
                 </div>
             </section>

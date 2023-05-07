@@ -1,6 +1,5 @@
 import paginationStyle from './Pagination.module.css';
 
-
 function Pagination({ currentPage, totalPages, onPageChange }) {
     const pageNumbers = [];
 
@@ -18,7 +17,6 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
                                 className={pageNumber === currentPage ? paginationStyle.active : ''}
                                 onClick={() => onPageChange(pageNumber)}
                             >
-
                                 {pageNumber}
                             </button>
                         </li>

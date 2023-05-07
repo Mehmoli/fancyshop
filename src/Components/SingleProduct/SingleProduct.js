@@ -18,7 +18,7 @@ function SingleProduct({ product }) {
                 <div className={singleProductStyle.product_photo}>
                     <img
                         className={singleProductStyle.product_image}
-                        alt='Afbeelding product'
+                        alt={`Afbeelding ${product.title}`}
                         src={product.image}
                     />
                 </div>
@@ -45,7 +45,6 @@ function SingleProduct({ product }) {
                     (
                         <Button
                             className={singleProductStyle.btn_product_card}
-                            // onClick={() => console.log('Button is clicked')}
                             onClick={() => dispatch({ type: "ADD_ITEM", payload: product })}
                         >
                             In Winkelwagen

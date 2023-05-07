@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 function SearchInputButton() {
     const products = useContext(ProductsContext);
     const navigate = useNavigate();
-
     const [searchQuery, setSearchQuery] = useState('');
 
     const handleSearch = (e) => {

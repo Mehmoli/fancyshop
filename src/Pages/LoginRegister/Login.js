@@ -7,7 +7,6 @@ import {Link} from 'react-router-dom';
 import axios from 'axios';
 import {AuthContext} from '../../AuthContext/AuthContextProvider';
 
-
 function Login() {
     const [loading, toggleLoading] = useState(false);
     const [email, setEmail] = useState('');
@@ -19,7 +18,6 @@ function Login() {
     const {login} = useContext(AuthContext);
 
     const regEx = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
-
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -36,7 +34,7 @@ function Login() {
         }
 
         try {
-            const result = await axios.post('https://frontend-educational-backend.herokuapp.com/api/auth/signin', {
+            const result = await axios.post(`${process.env.REACT_APP_NOVI_BACKEND}auth/signin`, {
                 username: email,
                 email: email,
                 password: password,
@@ -83,7 +81,6 @@ function Login() {
                 </section>}
             <Footer/>
         </>
-
     );
 }
 

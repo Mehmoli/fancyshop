@@ -13,12 +13,11 @@ function AuthContextProvider({ children }) {
     });
     const navigate = useNavigate();
 
-    const fetchUserData = useCallback(async (token, redirectUrl) => {
+    const fetchUserData = useCallback(async (token, redirectUrl = null) => {
         try {
-            // console.log("fout?");
             console.log(token);
             const { data } = await axios.get(
-                `https://frontend-educational-backend.herokuapp.com/api/user`,
+                `${process.env.REACT_APP_NOVI_BACKEND}user`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -58,7 +57,7 @@ function AuthContextProvider({ children }) {
             const decoded = jwt_decode(token);
             console.log("token:" + token);
             console.log("sub:" + decoded.sub);
-            fetchUserData(token);
+            void fetchUserData(token);
         } else {
             setIsAuth({
                 isAuth: false,
@@ -71,7 +70,7 @@ function AuthContextProvider({ children }) {
     const login = useCallback((JWT) => {
         localStorage.setItem('token', JWT);
 
-        fetchUserData(JWT, '/profile');
+        void fetchUserData(JWT, '/profile');
     }, [fetchUserData]);
 
     const logout = useCallback(() => {

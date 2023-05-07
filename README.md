@@ -1,15 +1,22 @@
 # Getting Started with Fancyshop!
 
 Project Titel Fancyshop!
-
+![](readme.jpg)
 Fancyshop is een webshop op basis van Fake Store Api.
-De aantallen producten zijn beperkt, namelijk 20 stuks.
+De aantallen producten zijn beperkt, namelijk 20 stuks. 
+Men kan zoeken naar de producten via de zoekbalk, 
+navigeren op basis van categorieën of alle producten bekijken. Men kan zich registreren 
+en inloggen met het gemaakte account om zo de profielgegevens te bekijken.
 
 #### Dependencies
 
--React-router-dom v6  
+-react
+-react-dom
+-react-router-dom v6  
 -axios  
 -jwt-decode
+-react-icons
+-react-scripts
 
 #### Getting Started  
 Clone project van <https://github.com/Mehmoli/fancyshop.git>

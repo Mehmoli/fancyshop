@@ -148,6 +148,7 @@ input:focus {
     background-color: var(--buttonColor);
     cursor: pointer;
     border-radius: 5px;
+    color:var(--textColorLight);
 }
 
 @media (max-width: 764px) {

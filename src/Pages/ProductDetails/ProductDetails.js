@@ -21,7 +21,6 @@ function ProductDetails() {
     const product = data[params.id - 1];
 
     return (
-
         <>
             <section className={prodDetailStyle.container}>
                 <div className={prodDetailStyle.product_card}>
@@ -36,10 +35,8 @@ function ProductDetails() {
 
                     </div>
                     <div className={prodDetailStyle.product_text}>
-
                         <p>{product.description}</p>
                         <p className={prodDetailStyle.price}>€ {product.price.toFixed(2)}</p>
-
                         <Button
                             className={prodDetailStyle.btn_product_card}
                             onClick={() => dispatch({ type: "ADD_ITEM", payload: product })}
@@ -52,10 +49,7 @@ function ProductDetails() {
             </section>
             <Footer />
         </>
-
     )
 }
-
-
 
 export default ProductDetails;
